@@ -1,0 +1,22 @@
+colvarsTrajFrequency 10
+  
+colvar {
+#Z-height of one PA 
+        name zpa
+        width 1.0
+        distanceZ {
+                main {
+                        atomNumbersRange 2561-2590
+                }
+                ref {
+                        atomNumbers 1
+                }
+        }
+        outputValue on
+}
+
+harmonic {
+        colvars zpa
+        centers 10
+        forceConstant 0.40
+}

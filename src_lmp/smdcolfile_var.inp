@@ -1,0 +1,22 @@
+# Colvars Module for SMD simulations
+# Use this as a precursor to generate initial configurtations for US
+# Date: March-24-2018
+colvar {
+	name rsmd
+	width 1.0
+	distanceZ {
+		 ref {atomNumbers ref_init}
+		 main {atomNumbersRange py_init-py_fin}
+		 }
+}
+
+harmonic {
+	 name harmony
+	 colvars rsmd
+	 centers py_targinit
+	 forceConstant py_fcon
+	 targetCenters py_targfin
+	 targetNumSteps 1000000
+	 outputCenters yes
+	 outputAccumulatedWork yes
+	 }	

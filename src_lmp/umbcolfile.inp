@@ -1,0 +1,17 @@
+# Colvars Module for US
+# Date: March-24-2018
+colvar {
+	name umbsampling
+	width 1.0
+	distanceZ {
+		 ref {atomNumbersRange ref_init-ref_fin}
+		 main {atomNumbersRange py_init-py_fin}
+		 }
+}
+
+harmonic {
+	 name harmony
+	 colvars umbsampling
+	 centers py_cval
+	 forceConstant py_fcon
+	 }	
