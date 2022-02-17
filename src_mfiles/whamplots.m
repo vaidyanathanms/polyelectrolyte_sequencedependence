@@ -223,7 +223,7 @@ for nvals = 1:length(nvalsarr)
     
     %compute debye length = sqrt(V/(4*pi*(ns+ncounter)))
     
-    deb_len = sqrt(vol/(4*pi*(nvalsarr(nvals)*nchargedmons+ngraft*nchargedmons + nsalt*2)));
+    deb_len = sqrt(vol/(4*pi*(2*nvalsarr(nvals)*nchargedmons+2*ngraft*nchargedmons + nsalt*2)));
     fprintf(fdebye,'%d\t%g\n',nvalsarr(nvals),deb_len);
     
     for i = 1:4
